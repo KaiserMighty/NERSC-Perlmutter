@@ -13,10 +13,10 @@ setup(int64_t N, uint64_t A[])
 {
    printf(" inside sum_indirect problem_setup, N=%lld \n", N);
 
-   std::srand(48);
+   srand48(48);
    for (int64_t j = 0; j < N; ++j)
    {
-      A[j] = std::rand() % N;
+      A[j] = lrand48() % N;
    }
 }
 
