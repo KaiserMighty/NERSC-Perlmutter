@@ -115,3 +115,10 @@ Total Operations = 3N
 (0.84035/134217728)*1e+9 = 6.26109540462 ns
 (4.21193/268435456)*1e+9 = 15.6906619668 ns
 ```
+
+# Conclusions
+Memory operations are the most expensive type of operation, and indirect sum is conducting the largest number of more expensive operations. Technically, vector sum and indirect sum are doing the same amount of memory operations, but indirect sum has more operations overall, making it the most expensive.
+
+The direct sum has the highest computational rate, or MFLOP/s. This is because it has the least amount of memory accesses, meaning that it has the least amount of downtime between floating-point operations. This results in a lesser overall time and greater floating-point operations per second.
+
+Vector sum also has a higher level of memory bandwidth utilization and a lower level of memory latency as the memory accesses have greater spatial locality compared indirect sum. In indirect sum, the memory access indexes are random, the chance of the next index being in the cache is significantly lower. This means that data has to be moved from memory to cache more often, increasing it's latency. Vector sum on the other hand, has it's memory accesses "sorted", as in the next access is right next to the one we are accessing right now. This means there is less downtime as data is moved around, leading to a higher amount of bandwidth used because more memory accesses are able to take place in a shorter amount of time, and a lower memory latency because the amount of times data has to be moved from memory to cache is lower due to multi-word cache blocks.
