@@ -116,6 +116,11 @@ Total Operations = 3N
 (4.21193/268435456)*1e+9 = 15.6906619668 ns
 ```
 
+# Charts
+![MFLOP/s Plot](mflops_plot.png)
+![Bandwidth Plot](bandwidth_plot.png)
+![Latency Plot](latency_plot.png)
+
 # Conclusions
 Memory operations are the most expensive type of operation, and indirect sum is conducting the largest number of more expensive operations. Technically, vector sum and indirect sum are doing the same amount of memory operations, but indirect sum has more operations overall, making it the most expensive.
 
