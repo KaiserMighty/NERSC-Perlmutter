@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# Directories
+sum_performance_modelling/build
+vector_matrix_multiplication/build
