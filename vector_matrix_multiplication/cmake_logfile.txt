@@ -1,0 +1,22 @@
+-- The C compiler identification is GNU 12.3.0
+-- The CXX compiler identification is GNU 12.3.0
+-- Cray Programming Environment 2.7.30 C
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /opt/cray/pe/craype/2.7.30/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Cray Programming Environment 2.7.30 CXX
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /opt/cray/pe/craype/2.7.30/bin/CC - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- compiler = GNU
+-- Looking for sgemm_
+-- Looking for sgemm_ - found
+-- Found BLAS: BLAS_LIBRARIES-PLACEHOLDER-FOR-EMPTY-LIBRARIES
+-- setting vector flags for gcc compiler = GNU
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /global/homes/m/mighty/NERSC-Perlmutter/vector_matrix_multiplication/build
