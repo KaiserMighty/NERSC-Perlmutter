@@ -31,6 +31,10 @@
 *.out
 *.app
 
+# Reports
+*.sqlite
+*.nsys-rep
+
 # Directories
 sum_performance_modelling/build
 vector_matrix_multiplication/build
