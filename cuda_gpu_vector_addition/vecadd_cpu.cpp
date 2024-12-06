@@ -1,4 +1,5 @@
 #include <chrono>
+#include <iomanip>
 #include <iostream>
 #include <math.h>
 
@@ -10,6 +11,8 @@ void add(int n, float *x, float *y)
 
 int main(void)
 {
+    std::cout << std::fixed << std::setprecision(5);
+
     int N = 1<<29;
 
     float *x = new float[N];
