@@ -1,0 +1,42 @@
+WARNING: vecadd_gpu_256t and any of its children processes will be profiled.
+
+Max error: 0
+Generating '/tmp/nsys-report-8b22.qdstrm'
+[1/7] [========================100%] report2.nsys-rep
+[2/7] [========================100%] report2.sqlite
+[3/7] Executing 'nvtx_sum' stats report
+SKIPPED: /pscratch/sd/m/mighty/cuda_vecadd/NERSC-Perlmutter/cuda_gpu_vector_addition/report2.sqlite does not contain NV Tools Extension (NVTX) data.
+[4/7] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls     Avg (ns)         Med (ns)        Min (ns)       Max (ns)      StdDev (ns)            Name
+ --------  ---------------  ---------  ---------------  ---------------  -------------  -------------  -------------  ----------------------
+     70.0    1,744,075,843          1  1,744,075,843.0  1,744,075,843.0  1,744,075,843  1,744,075,843            0.0  cudaDeviceSynchronize
+     18.7      465,464,564          2    232,732,282.0    232,732,282.0         49,686    465,414,878  329,062,883.0  cudaMallocManaged
+      7.9      197,035,710          2     98,517,855.0     98,517,855.0     67,821,459    129,214,251   43,411,259.5  cudaFree
+      3.4       84,510,443          1     84,510,443.0     84,510,443.0     84,510,443     84,510,443            0.0  cudaLaunchKernel
+      0.0            1,022          1          1,022.0          1,022.0          1,022          1,022            0.0  cuModuleGetLoadingMode
+
+[5/7] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances     Avg (ns)         Med (ns)        Min (ns)       Max (ns)     StdDev (ns)             Name
+ --------  ---------------  ---------  ---------------  ---------------  -------------  -------------  -----------  --------------------------
+    100.0    1,744,066,506          1  1,744,066,506.0  1,744,066,506.0  1,744,066,506  1,744,066,506          0.0  add(int, float *, float *)
+
+[6/7] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)               Operation
+
+ --------  ---------------  ------  --------  --------  --------  --------  -----------  ------------------------------------
+     65.2      207,998,248  24,576   8,463.5   3,839.5     1,663    41,952     11,229.6  [CUDA memcpy Unified Host-to-Device]
+     34.8      111,206,893  12,288   9,050.0   3,423.5     1,726    49,376     12,385.2  [CUDA memcpy Unified Device-to-Host]
+
+[7/7] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count   Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)               Operation
+ ----------  ------  --------  --------  --------  --------  -----------  ------------------------------------
+  4,294.967  24,576     0.175     0.033     0.004     1.044        0.301  [CUDA memcpy Unified Host-to-Device]
+  2,147.484  12,288     0.175     0.033     0.004     1.044        0.301  [CUDA memcpy Unified Device-to-Host]
+
+Generated:
+    /pscratch/sd/m/mighty/cuda_vecadd/NERSC-Perlmutter/cuda_gpu_vector_addition/report2.nsys-rep
+    /pscratch/sd/m/mighty/cuda_vecadd/NERSC-Perlmutter/cuda_gpu_vector_addition/report2.sqlite
